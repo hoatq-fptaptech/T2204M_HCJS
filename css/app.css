@@ -15,6 +15,7 @@ p{
 
     width: 500px;
     background-color: #f5f5dc;
+    border-bottom: 1px solid #ff0000;
 }
 body{
     background-color: antiquewhite;
