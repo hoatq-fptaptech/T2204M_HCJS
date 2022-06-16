@@ -1,0 +1,35 @@
+#demo #para{
+    color: green;
+}
+#para{
+    color: aqua;
+}
+.box .graph{
+    color: orange;
+}
+.graph{
+    color: blue;
+}
+body div p{
+
+}
+div p{
+    color: #ab5428;
+}
+p{
+    font-size: 30px;
+    font-weight: 700;
+    color: yellow;
+}
+p{
+    color: red;
+}
+/*
+cac cap do uu tien
+    1. tag
+    2. parent tag
+    3. class
+    4. parent class
+    5. id
+    6. parent id
+ */

@@ -68,3 +68,12 @@ img{
     line-height: 1.25;
     text-align: justify;
 }
+.block-title{
+    color: green;
+}
+.block-title.pro-title{
+    color: red;
+}
+.right-block h2{
+
+}
