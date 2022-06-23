@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo Bootstrap</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/demobootstrap.css"/>
+</head>
+<body>
+    <header class="section header">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <section class="section main">
+        <div class="container">
+            <div class="row">
+                <div class="col red">1</div>
+                <div class="col green">2</div>
+                <div class="col blue">3</div>
+                <div class="col pink">4</div>
+                <div class="col green">5</div>
+                <div class="col red">6</div>
+            </div>
+            <div class="row">
+                <div class="col-3 red">1</div>
+                <div class="col-9 green">2</div>
+                <div class="col-1 blue">3</div>
+            </div>
+            <div class="row">
+                <div class="col  align-self-start">
+                    <img class="img-fluid" src="images/ngoctrinh.jpeg"/>
+                </div>
+                <div class="col  align-self-center">
+                    <img class="img-thumbnail" src="images/ngoctrinh.jpeg"/>
+                </div>
+                <div class="col  align-self-end">
+                    <img class="rounded" src="images/ngoctrinh.jpeg"/>
+                </div>
+            </div>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn An</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Thế Anh</td>
+                        <td>19</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputPassword6" class="col-form-label">Password</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                    <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">
+                      Must be 8-20 characters long.
+                    </span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+
+                <button type="button" class="btn btn-link">Link</button>
+
+            </form>
+            <form>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                </div>
+
+                <label for="basic-url" class="form-label">Your vanity URL</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text">With textarea</span>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
