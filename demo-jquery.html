@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo jQuery</title>
+</head>
+<body>
+    <h1 id="tit">MU đón tin vui: "Hàng thải" được tân binh Ngoại hạng Anh hỏi mua hơn 300 tỷ đồng</h1>
+    <p class="para">Hẳn không nhiều CĐV MU còn nhớ tới cái tên Pereira dù anh vẫn còn 1 năm trong hợp đồng với đội chủ sân Old Trafford. Lý do là bởi Pereira đã không chơi cho MU trong 2 mùa giải vừa qua, lần lượt bị đem cho mượn tại Lazio và gần đây là gã khổng lồ Brazil Flamengo, đội bóng đang nỗ lực mua đứt cầu thủ 26 tuổi.
+    </p>
+    <p class="para">Cũng theo truyền thông Brazil, Pereira vẫn có thể còn tương lai ở Old Trafford và tân HLV Erik Ten Hag sẽ gặp trực tiếp với cầu thủ 26 tuổi để bàn về vai trò của anh tại MU trong tương lai. Song song với đó, MU vẫn sẵn sàng lắng nghe những lời đề nghị dành cho Pereira nhằm giúp chiến lược gia người Hà Lan có thêm ngân sách chuyển nhượng mùa hè này trong nỗ lực tái thiết đội hình.
+    </p>
+
+    <h2>Dưới đây là thông tin thời tiết:</h2>
+    <p id="city">Hà Nội</p>
+    <p id="temp">20<sup>o</sup>C</p>
+    <p id="hump">86%</p>
+    <p id="press">1002</p>
+    <p id="desc">light rain</p>
+    <p id="icon"><img src="..." /></p>
+    <script type="text/javascript" src="libs/jquery/jquery.js"></script>
+    <script type="text/javascript">
+        setTimeout(function () {
+            var h = $("#tit");
+            h.css("color","green");
+            h.css("font-size","25px");
+            h.css({
+                "margin-bottom":"10px",
+                "border-bottom":"1px solid green"
+            });
+            h.text("Nội dung đã bị điều chỉnh");
+            h.html("<i>Nội dung đã thêm in nghiêng</i>");
+            h.prepend("<i>Chèn trước</i>");
+            h.append("<i>Chèn sau</i>");
+        },5000);
+
+        var ps = $(".para");// collection (array) cac object
+        ps.css("color","red");
+
+        var ps2 = $("p");
+        ps2.css("font-size","20px");
+
+
+        // thoi tiet
+        $.ajax({
+            url:"https://api.openweathermap.org/data/2.5/weather?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric",
+            method:"get",
+            success: function (data) {
+                var ct = $("#city");
+                ct.text(data.name+", "+data.sys.country);
+                $("#temp").html(data.main.temp+"<sup>o</sup>C");
+                $("#hump").html(data.main.humidity+"%");
+                $("#press").text(data.main.pressure);
+                $("#desc").text(data.weather[0].description);
+                $("#icon").html("<img src='https://openweathermap.org/img/wn/"+
+                    data.weather[0].icon+"@2x.png' />");
+            }
+        })
+    </script>
+</body>
+</html>
